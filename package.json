@@ -1,0 +1,25 @@
+{
+  "name": "handler",
+  "version": "2.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "KabirSingh",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.9.0",
+    "@discordjs/voice": "^0.7.5",
+    "discord.js": "^13.12.0",
+    "ffmpeg-static": "^4.4.0",
+    "libsodium-wrappers": "^0.7.9",
+    "mongoose": "^6.0.12",
+    "reconlx": "^2.5.1"
+  },
+  "devDependencies": {
+    "node": "^17.1.0",
+    "node-key-sender": "^1.0.11"
+  }
+}
