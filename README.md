@@ -5,7 +5,7 @@ Natro macro discord bot </h1><br/>
 
 **1.** Slash cmds for f1, f2 and f3
 
-**2.** WORK IN PRORES: Screenshots
+**2.** Screenshots!
 
 ## **Installation | How to use the Bot**
 
