@@ -1,1 +1,1 @@
-
+npm i desktop-screenshot
