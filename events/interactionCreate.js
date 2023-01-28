@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const client = require("..");
-var config = require("../settings/config.json");
+const { allowedUsers } = require("../settings/config.json")
 var ee = require("../settings/embed.json");
 
 client.on('interactionCreate', async interaction => {
@@ -35,6 +35,19 @@ client.on('interactionCreate', async interaction => {
                             .setColor(ee.embed_color)
                             .setDescription(`You don't Have ${cmd.userPermissions} To Run Command..`)
                             .setFooter(ee.embed_footertext, ee.embed_footericon)
+                    ]
+                })
+            }
+            if (allowedUsers.length && !allowedUsers.includes(interaction.user.id)) {
+                return interaction.followUp({
+                    embeds: [
+                        new MessageEmbed()
+                            .setColor(ee.embed_color)
+                            .setDescription(`You are not allowed to use this command`)
+                            .setFooter({
+                                text: ee.embed_footertext,
+                                icon_url: ee.embed_footericon
+                            })
                     ]
                 })
             }
