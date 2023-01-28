@@ -13,6 +13,8 @@
     "discord.js": "^13.12.0",
     "ffmpeg-static": "^4.4.0",
     "reconlx": "^2.5.1"
+    "libsodium-wrappers": "^0.7.9",
+    "mongoose": "^6.0.12",
   },
   "devDependencies": {
     "node": "^17.1.0",
