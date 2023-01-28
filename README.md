@@ -27,8 +27,11 @@ Natro macro discord bot </h1><br/>
 ```javascript
 {
     "token": "Bot_Token",
+    "allowedUsers": ["User_ID"],
 }
 ```
+
+Leaving the allowedUsers array empty will allow anyone to use the bot, and therefore control your computer. Be careful!
 
 <br/>
 
