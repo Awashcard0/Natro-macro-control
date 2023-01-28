@@ -38,7 +38,7 @@ client.on('interactionCreate', async interaction => {
                     ]
                 })
             }
-            if (!allowedUsers.length && !allowedUsers.includes(interaction.user.id)) {
+            if (allowedUsers.length && !allowedUsers.includes(interaction.user.id)) {
                 return interaction.followUp({
                     embeds: [
                         new MessageEmbed()
