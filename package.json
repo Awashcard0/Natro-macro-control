@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "node": "^17.1.0",
-    "node-key-sender": "^1.0.11"
+    "node-key-sender": "^1.0.11",
+    "desktop-screenshot": "^0.1.1"
   }
 }
