@@ -1,7 +1,4 @@
 const { Command } = require("reconlx");
-const { MessageEmbed } = require("discord.js");
-const ee = require('../../settings/embed.json')
-const config = require('../../settings/config.json')
 
 module.exports = new Command({
     // options
@@ -18,7 +15,7 @@ module.exports = new Command({
         }
     ],
     // command start
-    run: async ({ client, interaction, args }) => {
+    run: async ({ interaction }) => {
         let msg = interaction.options.getString('msg');
 
         interaction.followUp({ content: msg, ephemeral: true })
