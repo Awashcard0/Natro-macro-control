@@ -12,13 +12,11 @@
   "dependencies": {
     "discord.js": "^13.12.0",
     "ffmpeg-static": "^4.4.0",
-    "reconlx": "^2.5.1",
-    "libsodium-wrappers": "^0.7.9",
-    "mongoose": "^6.0.12"
+    "libsodium-wrappers": "^0.7.9"
   },
   "devDependencies": {
+    "desktop-screenshot": "^0.1.1",
     "node": "^17.1.0",
-    "node-key-sender": "^1.0.11",
-    "desktop-screenshot": "^0.1.1"
+    "node-key-sender": "^1.0.11"
   }
 }

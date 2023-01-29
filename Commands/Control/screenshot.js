@@ -1,9 +1,8 @@
-const { Command } = require("reconlx");
 const ee = require('../../settings/embed.json')
 const config = require('../../settings/config.json')
 var screenshot = require('desktop-screenshot');
 
-module.exports = new Command({
+module.exports = {
   // options
   name: 'screenshot',
   description: `Get a screenshot`,
@@ -19,4 +18,4 @@ module.exports = new Command({
 });
 
     }
-  })
+  }

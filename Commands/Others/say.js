@@ -1,9 +1,8 @@
-const { Command } = require("reconlx");
 const { MessageEmbed } = require("discord.js");
 const ee = require('../../settings/embed.json')
 const config = require('../../settings/config.json')
 
-module.exports = new Command({
+module.exports = {
     // options
     name: 'say',
     description: `Get Your Message Back`,
@@ -23,4 +22,4 @@ module.exports = new Command({
 
         interaction.followUp({ content: msg, ephemeral: true })
     }
-})
+}

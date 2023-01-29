@@ -1,9 +1,8 @@
-const { Command } = require("reconlx");
 const { MessageEmbed } = require("discord.js");
 const ee = require('../../settings/embed.json')
 const config = require('../../settings/config.json')
 
-module.exports = new Command({
+module.exports = {
     // options
     name: 'help',
     description: `Show All Commands`,
@@ -52,4 +51,4 @@ module.exports = new Command({
             console.log(e);
         }
     }
-})
+}

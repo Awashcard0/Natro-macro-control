@@ -1,9 +1,8 @@
-const { Command } = require("reconlx");
 const ee = require('../../settings/embed.json')
 const config = require('../../settings/config.json')
 var ks = require('node-key-sender');
 
-module.exports = new Command({
+module.exports = {
   // options
   name: 'start',
   description: `Start natro macro`,
@@ -15,4 +14,4 @@ module.exports = new Command({
     interaction.followUp(`Starting macro...`)
     ks.sendKey('f1');
     }
-  })
+  }
