@@ -19,8 +19,6 @@ module.exports = client;
 console.log("Thank you for useing Natro macro control by Awashcard0#0001");
 
 const config = require("./settings/config.json");
-const ee = require("./settings/embed.json");
-const prefix = config.prefix;
 const token = config.token;
 // Global Variables
 client.events = new Collection();
