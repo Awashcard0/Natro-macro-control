@@ -9,7 +9,7 @@ module.exports = new Command({
   category: "Control",
   // command start
   run: async ({ interaction }) => {
-    interaction.followUp(`Pauseing macro...`)
+    interaction.followUp(`Pausing macro...`)
     ks.sendKey('f2');
     }
   })
