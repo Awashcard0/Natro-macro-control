@@ -8,6 +8,13 @@ module.exports = new Command({
   category: "Control",
   // command start
   run: async ({ interaction }) => {
+    let id =
+    interaction.followUp(`Closeing roblox...`);
+    exec('tasklist', (err, out, code) => { 
+    const id = processIdFromTaskList("RobloxPlayerBeta.exe", out); 
+    process.kill(id, "SIGKILL");
+});
 
+    
     }
   })
