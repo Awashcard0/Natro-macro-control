@@ -1,4 +1,5 @@
 const { Command } = require("reconlx");
+const { exec } = require('child_process');
 
 module.exports = new Command({
   // options
@@ -8,13 +9,26 @@ module.exports = new Command({
   category: "Control",
   // command start
   run: async ({ interaction }) => {
-    let id =
     interaction.followUp(`Closeing roblox...`);
-    exec('tasklist', (err, out, code) => { 
-    const id = processIdFromTaskList("RobloxPlayerBeta.exe", out); 
-    process.kill(id, "SIGKILL");
-});
-
+      exec('tasklist /fi "imagename eq RobloxPlayerBeta.exe" /fo table /nh', (error, stdout) => {
+        if (error) {
+          console.error(`exec error: ${error}`);
+          interaction.followUp(`exec error: ${error}`);
+          return;
+        }
+      
+        const lines = stdout.split('\n');
+        for (const line of lines) {
+          if (line.startsWith('RobloxPlayerBeta.exe')) {
+            const parts = line.split(/\s+/);
+            const pid = parseInt(parts[1], 10);
+            console.log(`RobloxPlayerBeta.exe PID: ${pid}`);
+            process.kill(pid, "SIGKILL");
+            interaction.channel.send("Successfully stoped")
+            break;
+          }
+        }
+      });
     
     }
   })
