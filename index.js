@@ -56,9 +56,9 @@ request("https://raw.githubusercontent.com/Awashcard0/Natro-macro-control/main/v
     return;
   }
 
-  if (body === localVersion) {
+  if (body.includes(localVersion)) {
     console.log("You are using the most up-to-date version of natro macro remote control");
   } else {
-    console.log("To get the latest features from natro macro remote control please update it to ${body} at https://github.com/Awashcard0/Natro-macro-control");
+    console.log("To get the latest features from natro macro remote control please update it to", body, "at https://github.com/Awashcard0/Natro-macro-control");
   }
 });
