@@ -1,4 +1,5 @@
 const { Client, Collection } = require("discord.js");
+const request = require("request");
 const fs = require("fs");
 const client = new Client({
     messageCacheLifetime: 60,
@@ -17,6 +18,7 @@ const client = new Client({
 module.exports = client;
 
 console.log("Thank you for useing Natro macro control by Awashcard0#0001");
+const localVersion = "v5";
 
 const config = require("./settings/config.json");
 const token = config.token;
@@ -48,3 +50,15 @@ process.on('uncaughtExceptionMonitor', (err, origin) => {
     console.log(err, origin);
 });
 
+request("https://raw.githubusercontent.com/Awashcard0/Natro-macro-control/main/version.txt", function (error, response, body) {
+  if (error) {
+    console.error("Error making the request:", error);
+    return;
+  }
+
+  if (body.includes(localVersion)) {
+    console.log("You are using the most up-to-date version of natro macro remote control");
+  } else {
+    console.log("To get the latest features from natro macro remote control please update it to", body, "at https://github.com/Awashcard0/Natro-macro-control");
+  }
+});

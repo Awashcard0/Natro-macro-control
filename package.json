@@ -16,7 +16,8 @@
     "libsodium-wrappers": "^0.7.9",
     "mongoose": "^6.0.12",
     "process": "^0.11.10",
-    "reconlx": "^2.5.1"
+    "reconlx": "^2.5.1",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "desktop-screenshot": "^0.1.1",
